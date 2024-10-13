@@ -54,6 +54,7 @@ const App = () => {
   
   // Función que maneja el clic en una casilla
   const handleClick = square => {
+    if (squares[square] || turn === null) return; // Impide interactuar con la app entre declaración ganador y reseteo
     let newSquares = [...squares]; 
     newSquares.splice(square, 1, turn); 
     setSquares(newSquares);

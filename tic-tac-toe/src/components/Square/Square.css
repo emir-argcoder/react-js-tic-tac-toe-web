@@ -17,3 +17,27 @@
 	background-color: #4392f1;
 	border-radius: 50%;
 }
+
+.square--X.winner {
+	animation: x—winner-animation infinite 2s ease-in-out; 
+}
+
+.square--O.winner {
+	animation: o-winner-animation infinite .5s ease-in-out; 
+}
+
+@keyframes x—winner-animation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}	
+}
+
+@keyframes o-winner-animation {
+	0% { border-radius: 50%;}
+	50% { border-radius: 0%;}
+	100% { border-radius: 50%;}
+}
+
